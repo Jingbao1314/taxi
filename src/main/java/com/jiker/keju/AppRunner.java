@@ -12,8 +12,8 @@ public class AppRunner {
           2. 你写的程序将把testDataFile作为参数加载此文件并读取文件内的测试数据，并对每条测试数据计算结果。
           3. 将所有计费结果拼接并使用\n分割，然后保存到receipt变量中。
          */
-        String testDataFile = args[0];
-        String receipt = FileUtils.readFile(testDataFile,"");
-        System.out.println(receipt);
+        StringBuffer receipt = new StringBuffer();
+        FileUtils.readFile(System.getProperty("user.dir")+"/src/main/resources/testData.txt",receipt);
+        System.out.println(receipt.toString());
     }
 }
