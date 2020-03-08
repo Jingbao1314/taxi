@@ -13,7 +13,7 @@ public class AppRunner {
           3. 将所有计费结果拼接并使用\n分割，然后保存到receipt变量中。
          */
         StringBuffer receipt = new StringBuffer();
-        FileUtils.readFile(args[0],receipt);
+        FileUtils.readFile(System.getProperty("user.dir")+"/src/main/resources/testData.txt",receipt);
         System.out.println(receipt.toString());
     }
 }

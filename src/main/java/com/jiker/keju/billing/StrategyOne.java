@@ -24,7 +24,7 @@ public class StrategyOne  implements TaxiCost{
     @Override
     public String billing() {
         String cost="收费";
-        String unit="元";
+        String unit="元\n";
         BigDecimal waitPart= MathUtils.multiply(waitingTime,waitCost);
         BigDecimal all=MathUtils.add(waitPart,baseCost).setScale(0);
         return cost+all.toString()+unit;

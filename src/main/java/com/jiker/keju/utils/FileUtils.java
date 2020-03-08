@@ -16,7 +16,7 @@ public class FileUtils {
         while (( line = reader.readLine()) != null) {
             Matcher matcher = Pattern.compile("[0-9]*").matcher(line);
             if (matcher.find()) {
-                System.out.println(StraegyFactoy.getStraegy(Integer.parseInt(matcher.group(0)), Integer.parseInt(line.split("[等待分钟]")[2])).billing());
+                res.append(StraegyFactoy.getStraegy(Integer.parseInt(matcher.group(0)), Integer.parseInt(line.split("[等待分钟]")[2])).billing());
             }
         }
     }
