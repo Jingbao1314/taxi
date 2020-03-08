@@ -24,7 +24,7 @@ public class StrategyTwo implements TaxiCost{
     @Override
     public String billing() {
         String cost="收费";
-        String unit="元\\n";
+        String unit="元";
         BigDecimal manyParts= MathUtils.subtract(cistance,baseCistance);
         BigDecimal waitPart=MathUtils.multiply(waitingTime,waitCost);
         BigDecimal other=MathUtils.add(baseCost,MathUtils.multiply(manyParts,new BigDecimal(0.8)));
