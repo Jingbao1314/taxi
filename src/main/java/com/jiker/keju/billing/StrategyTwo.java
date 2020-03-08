@@ -28,7 +28,7 @@ public class StrategyTwo implements TaxiCost{
         BigDecimal manyParts= MathUtils.subtract(cistance,baseCistance);
         BigDecimal waitPart=MathUtils.multiply(waitingTime,waitCost);
         BigDecimal other=MathUtils.add(baseCost,MathUtils.multiply(manyParts,new BigDecimal(0.8)));
-        BigDecimal all=MathUtils.add(waitPart,other);
-        return cost+all+unit;
+        BigDecimal all=MathUtils.add(waitPart,other).setScale(0);
+        return cost+all.toString()+unit;
     }
 }

@@ -29,7 +29,7 @@ public class StrategyThree implements TaxiCost{
         BigDecimal longHaulPart= MathUtils.subtract(cistance,longHaulCistance);
         BigDecimal unLong=MathUtils.add(baseCost,MathUtils.multiply(manyParts,new BigDecimal(0.8)));
         BigDecimal isLong=MathUtils.multiply(longHaulPart,longHaul);
-        BigDecimal all=MathUtils.add(MathUtils.multiply(waitingTime,waitCost),MathUtils.add(unLong,isLong));
-        return cost+all+unit;
+        BigDecimal all=MathUtils.add(MathUtils.multiply(waitingTime,waitCost),MathUtils.add(unLong,isLong)).setScale(0);
+        return cost+all.toString()+unit;
     }
 }
