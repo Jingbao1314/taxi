@@ -11,6 +11,7 @@ public class StrategyThree implements TaxiCost{
     private BigDecimal waitingTime;
 
     public StrategyThree(BigDecimal cistance, BigDecimal waitingTime) {
+        System.out.println(cistance.toString()+"-------------------"+waitingTime.toString());
         this.cistance = cistance;
         this.waitingTime = waitingTime;
     }
