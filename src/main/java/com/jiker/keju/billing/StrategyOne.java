@@ -12,7 +12,6 @@ public class StrategyOne  implements TaxiCost{
     private BigDecimal waitingTime;
 
     public StrategyOne(BigDecimal waitingTime) {
-        System.out.println("0-------------------"+waitingTime.toString());
         this.waitingTime = waitingTime;
     }
 
